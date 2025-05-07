@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>챗봇 TTS</title>
+    <style>
+        .chat-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .user-message {
+            background-color: #e3f2fd;
+            margin-left: 20%;
+        }
+        .bot-message {
+            background-color: #f5f5f5;
+            margin-right: 20%;
+        }
+        .tts-controls {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .controls {
+            margin: 10px 0;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div id="chat-messages"></div>
+        <div class="tts-controls">
+            <div class="controls">
+                <label>감정:</label>
+                <select id="emotion-select">
+                    <option value="neutral">중립</option>
+                    <option value="happy">기쁨</option>
+                    <option value="sad">슬픔</option>
+                    <option value="angry">화남</option>
+                </select>
+                <label>음높이:</label>
+                <input type="range" id="pitch-slider" min="-20" max="20" value="0">
+                <span id="pitch-value">0</span>
+            </div>
+            <button onclick="playSelectedMessage()">선택 메시지 TTS 변환</button>
+        </div>
+    </div>
+    <audio id="audio" style="display: none;"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
