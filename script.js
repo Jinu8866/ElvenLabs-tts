@@ -1,4 +1,4 @@
-const apiKey = 'sk_cef3783b2f470f6c288c07e39fad91142e7f8dcedec1d307'; //API KEY 입력  
+const apiKey = ''; //API KEY 입력  
 const voiceId = 'ID'; // voice id 입력
 
 // 선택된 메시지를 저장할 변수
